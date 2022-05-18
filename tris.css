@@ -5,7 +5,7 @@
 	background-color: #008CBA;
 	font-size:50px;
 	border: none;
-	color:red;
+	color:white;
 
 }
 
@@ -25,13 +25,11 @@ table{
 	
 	margin-left:400px;
 	width:250px;
-	background-color:red;
 	
 }
 
 #result{
 	
-	color:red;
 	font-size:30px;
 	font-family:verdana;
 	text-align:center;
