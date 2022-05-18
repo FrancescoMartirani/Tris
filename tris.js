@@ -40,60 +40,111 @@ var tris = {
 	controllo: function(){
 		
 		var p_result = document.getElementById("result");
+		var button_resetta = document.getElementById("resetta");
 		
 		if(this.arraydinamicagioco[0] != null && this.arraydinamicagioco[0] == this.arraydinamicagioco[1] && this.arraydinamicagioco[1] == this.arraydinamicagioco[2]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
 		
 		}
 		
-		if(this.arraydinamicagioco[3] != null && this.arraydinamicagioco[3] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[5]){
+		else if(this.arraydinamicagioco[3] != null && this.arraydinamicagioco[3] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[5]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
 		
 		}
 		
-		if(this.arraydinamicagioco[6] != null && this.arraydinamicagioco[6] == this.arraydinamicagioco[7] && this.arraydinamicagioco[7] == this.arraydinamicagioco[8]){
+		else if(this.arraydinamicagioco[6] != null && this.arraydinamicagioco[6] == this.arraydinamicagioco[7] && this.arraydinamicagioco[7] == this.arraydinamicagioco[8]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
 		
 		}
 		
-		if(this.arraydinamicagioco[0] != null && this.arraydinamicagioco[0] == this.arraydinamicagioco[3] && this.arraydinamicagioco[3] == this.arraydinamicagioco[6]){
+		else if(this.arraydinamicagioco[0] != null && this.arraydinamicagioco[0] == this.arraydinamicagioco[3] && this.arraydinamicagioco[3] == this.arraydinamicagioco[6]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
 		
 		}
 		
-		if(this.arraydinamicagioco[1] != null && this.arraydinamicagioco[1] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[7]){
+		else if(this.arraydinamicagioco[1] != null && this.arraydinamicagioco[1] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[7]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
 		
 		}
 		
-		if(this.arraydinamicagioco[2] != null && this.arraydinamicagioco[2] == this.arraydinamicagioco[5] && this.arraydinamicagioco[5] == this.arraydinamicagioco[8]){
+		else if(this.arraydinamicagioco[2] != null && this.arraydinamicagioco[2] == this.arraydinamicagioco[5] && this.arraydinamicagioco[5] == this.arraydinamicagioco[8]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
 		
 		}
 		
-		if(this.arraydinamicagioco[0] != null && this.arraydinamicagioco[0] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[8]){
+		else if(this.arraydinamicagioco[0] != null && this.arraydinamicagioco[0] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[8]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
 		
 		}
 		
-		if(this.arraydinamicagioco[6] != null && this.arraydinamicagioco[6] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[2]){
+		else if(this.arraydinamicagioco[6] != null && this.arraydinamicagioco[6] == this.arraydinamicagioco[4] && this.arraydinamicagioco[4] == this.arraydinamicagioco[2]){
 			
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
+			button_resetta.disabled = false;
+		
+		}
+		
+		else{
+			
+			var numeroCaselleOccupate = 0;
+			
+			for(i=0;i<this.arraydinamicagioco.length;i++){
+			
+				if(this.arraydinamicagioco[i] != null){
+				
+					numeroCaselleOccupate++;
+					
+				}
+				
+			}
+			
+			if(numeroCaselleOccupate==9){
+			
+				button_resetta.disabled = false;
+				
+			}
+			
+		}
+		
+	},
+	
+	resetta: function(){
+		
+		for(i=1;i<10;i++){
+		
+			document.getElementById(i).value = "";
+			
+		}
+		
+		this.vittoria = false;
+		
+		document.getElementById("result").innerHTML = "";
+		
+		for(i=0;i<this.arraydinamicagioco.length;i++){
+			
+			this.arraydinamicagioco[i] = null;
 		
 		}
 		

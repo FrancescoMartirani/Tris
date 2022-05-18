@@ -1,4 +1,4 @@
-input{
+.triscasella{
 
 	width:80px;
 	height:80px;
@@ -21,13 +21,30 @@ table{
 	
 }
 
+#displayandbutton{
+	
+	margin-left:400px;
+	width:250px;
+	background-color:red;
+	
+}
+
 #result{
 	
 	color:red;
 	font-size:30px;
 	font-family:verdana;
 	text-align:center;
-	width:250px;
-	margin-left:400px;
+	width:70px;
+	float:left;
+	
+}
+
+#resetta{
+	
+	width:100px;
+	height:50px;
+	float:right;
+	margin-top:20px;
 	
 }
