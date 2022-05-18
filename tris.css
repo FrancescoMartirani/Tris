@@ -1,4 +1,4 @@
-.triscasella{
+.casella{
 
 	width:80px;
 	height:80px;
@@ -36,6 +36,7 @@ table{
 
 	margin-right:240px;
 	float:right;
+	display:none;
 	
 }
 
@@ -43,6 +44,7 @@ table{
 	
 	margin-left:300px;
 	width:250px;
+	display:none;
 	
 }
 
@@ -62,5 +64,21 @@ table{
 	height:50px;
 	float:right;
 	margin-top:20px;
+	
+}
+
+form{
+	
+	font-family:verdana;
+	width:320px;
+	margin-left:350px;
+	
+}
+
+form #start{
+	
+	width:70px;
+	height:50px;
+	font-size:20px;
 	
 }

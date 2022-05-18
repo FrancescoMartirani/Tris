@@ -6,48 +6,39 @@
 	
 		<link href="tris.css" rel="stylesheet" type="text/css">
 		<script language="JavaScript" type="text/JavaScript" src="tris.js"></script>
+		<script language="JavaScript" type="text/JavaScript" src="quadris.js"></script>
+		<script language="JavaScript" type="text/JavaScript" src="creatoregioco.js"></script>	
 		
 	</head>
 	
 	<body>
-	
+		
+		<form id="form">
+		
+			<p>A che gioco vuoi giocare? Inserisci il numero di caselle per lato</p>
+			<input name="sceltaGioco" value="Tris" type="radio"> 
+			<label>Tris</label> <br>
+			<input name="sceltaGioco" value="Quadris" type="radio"> 
+			<label>Quadris</label> <br> <br>
+			<input id="start" type="button" onclick="creatoregioco.determinaGioco();gioco.gioco(creatoregioco.numeroCasellePerLato)" value="Gioca">
+			
+		</form>
+		
 		<div id="gioco">
 		
-			<table>
+			<div id="grigliagioco">
 			
-				<tr>
-				
-					<td><input id="1" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-					<td><input id="2" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-					<td><input id="3" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				
-				</tr>
-				
-				<tr>
-				
-					<td><input id="4" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-					<td><input id="5" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-					<td><input id="6" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				
-				</tr>
-				
-				<tr>
-				
-					<td><input id="7" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-					<td><input id="8" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-					<td><input id="9" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				
-				</tr>
 			
-			</table>
+			
+			</div>
 			
 			<div id="displayandbutton">
 				
-				<input id="resetta" type="button" value="Nuova partita" onclick="tris.resetta()" disabled>
+				<input id="resetta" type="button" value="Nuova partita" onclick="gioco.resetta()" disabled>
 				
 				<p id="result"></p>
 			
-			</div>
+			</div> 
 		
 		</div>
 		
