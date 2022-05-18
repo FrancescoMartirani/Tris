@@ -164,20 +164,17 @@ var tris = {
 		
 		if(segno == "X"){
 			
-			this.punteggioGiocatoreX++;			
+			this.punteggioGiocatoreX++;
+			document.getElementById("punteggioGiocatoreX").innerHTML = this.punteggioGiocatoreX;
 			
 		}
 		
 		else{
 			
 			this.punteggioGiocatoreO++;
+			document.getElementById("punteggioGiocatoreO").innerHTML = this.punteggioGiocatoreO;
 		
 		}
-		
-				
-		document.getElementById("punteggioGiocatoreX").innerHTML = this.punteggioGiocatoreX;
-		document.getElementById("punteggioGiocatoreO").innerHTML = this.punteggioGiocatoreO;
-
 		
 	}
   
