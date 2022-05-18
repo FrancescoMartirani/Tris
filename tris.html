@@ -10,39 +10,51 @@
 	</head>
 	
 	<body>
-		<table>
+	
+		<div id="gioco">
 		
-			<tr>
+			<table>
 			
-				<td><input id="1" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				<td><input id="2" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				<td><input id="3" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+				<tr>
+				
+					<td><input id="1" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+					<td><input id="2" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+					<td><input id="3" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+				
+				</tr>
+				
+				<tr>
+				
+					<td><input id="4" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+					<td><input id="5" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+					<td><input id="6" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+				
+				</tr>
+				
+				<tr>
+				
+					<td><input id="7" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+					<td><input id="8" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+					<td><input id="9" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
+				
+				</tr>
 			
-			</tr>
+			</table>
 			
-			<tr>
+			<div id="displayandbutton">
+				
+				<input id="resetta" type="button" value="Nuova partita" onclick="tris.resetta()" disabled>
+				
+				<p id="result"></p>
 			
-				<td><input id="4" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				<td><input id="5" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				<td><input id="6" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-			
-			</tr>
-			
-			<tr>
-			
-				<td><input id="7" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				<td><input id="8" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-				<td><input id="9" class="triscasella" type="button" onclick="tris.scriviSegno(this.id)"></td>
-			
-			</tr>
+			</div>
 		
-		</table>
+		</div>
 		
-		<div id="displayandbutton">
-			
-			<input id="resetta" type="button" value="Nuova partita" onclick="tris.resetta()" disabled>
-			
-			<p id="result"></p>
+		<div id="punteggi">
+		
+			<p id="punteggio">Punteggio giocatore X: <span id="punteggiogiocatoreX">0</span></P>
+			<p id="punteggio">Punteggio giocatore O: <span id="punteggiogiocatoreO">0</span></P>
 		
 		</div>
 	

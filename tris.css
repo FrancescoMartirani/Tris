@@ -17,13 +17,31 @@ tr{
 
 table{
 	
-	margin-left:400px;
+	margin-left:300px;
+	
+}
+
+#gioco{
+	
+	float:left;
+	
+}
+#punteggio{
+	
+	font-family:verdana;
+	
+}
+
+#punteggi{
+
+	margin-right:240px;
+	float:right;
 	
 }
 
 #displayandbutton{
 	
-	margin-left:400px;
+	margin-left:300px;
 	width:250px;
 	
 }

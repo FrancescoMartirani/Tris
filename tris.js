@@ -3,6 +3,8 @@ var tris = {
 	segno:"X",
 	arraydinamicagioco: new Array(),
 	outputVittoria: "Tris!",
+	punteggioGiocatoreX: 0,
+	punteggioGiocatoreO: 0,
 	vittoria: false,
   
 	scriviSegno: function (id){
@@ -47,6 +49,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[0]);
 		
 		}
 		
@@ -55,6 +58,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[3]);
 		
 		}
 		
@@ -63,6 +67,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[6]);
 		
 		}
 		
@@ -71,6 +76,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[0]);
 		
 		}
 		
@@ -79,6 +85,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[1]);
 		
 		}
 		
@@ -87,6 +94,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[2]);
 		
 		}
 		
@@ -95,6 +103,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[0]);
 		
 		}
 		
@@ -103,6 +112,7 @@ var tris = {
 			p_result.innerHTML = this.outputVittoria;
 			this.vittoria = true;
 			button_resetta.disabled = false;
+			this.assegnaPunteggio(this.arraydinamicagioco[6]);
 		
 		}
 		
@@ -147,6 +157,27 @@ var tris = {
 			this.arraydinamicagioco[i] = null;
 		
 		}
+		
+	},
+	
+	assegnaPunteggio: function(segno){
+		
+		if(segno == "X"){
+			
+			this.punteggioGiocatoreX++;			
+			
+		}
+		
+		else{
+			
+			this.punteggioGiocatoreO++;
+		
+		}
+		
+				
+		document.getElementById("punteggioGiocatoreX").innerHTML = this.punteggioGiocatoreX;
+		document.getElementById("punteggioGiocatoreO").innerHTML = this.punteggioGiocatoreO;
+
 		
 	}
   
